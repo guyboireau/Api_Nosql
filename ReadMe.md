@@ -17,12 +17,15 @@ Installation
 Clonez ce repo
 
 git clone https://github.com/guyboireau/Api_Nosql
+
 Installez les packages NPM
 
 npm install
+
 Créez un fichier .env avec les informations de configuration requises
 
 Installation
+
 Cloner ce dépôt de code
 Installer les dépendances : npm install
 Configurer les variables d'environnement dans le fichier .env
