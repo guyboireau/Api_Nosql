@@ -22,26 +22,14 @@ Installez les packages NPM
 npm install
 Créez un fichier .env avec les informations de configuration requises
 
-makefile
-Copy code
-PORT=3000
-MONGODB_URI=mongodb://localhost:27017/myapp
-JWT_SECRET=mysecret
-Lancez le serveur
-
 Installation
 Cloner ce dépôt de code
 Installer les dépendances : npm install
-Renommer le fichier .env.example en .env
 Configurer les variables d'environnement dans le fichier .env
 Lancer l'application : npm start
 
-
-npm start
 Utilisation
 Exemples d'utilisation des différentes routes de l'API :
-
-
 
 Menus
 
@@ -71,7 +59,7 @@ DELETE /commande/delete/:id : supprimer une commande (nécessite une authentific
 GET /commande/:id : récupérer une commande par son ID
 
 
-Authentification
+Users
 
 POST /user/signin : inscription
 
