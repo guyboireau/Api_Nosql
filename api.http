@@ -1,0 +1,85 @@
+@baseURL=http://localhost:3000
+
+@host=http://localhost:3000
+
+#################
+##User###########
+#################
+
+### Signin
+POST {{baseURL}}/signin
+Content-Type: application/json
+
+{
+    "email": "test1@mail.com",
+    "password": "123"
+}
+
+### Login 
+POST {{baseURL}}/login
+Content-Type: application/json
+
+{
+    "email": "test1@mail.com",
+    "password": "123"
+}
+
+### signout 
+GET {{baseURL}}/signout
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MDc0OTZhNTQ1OGY1MjQ5N2ZjMTY3NyIsImVtYWlsIjoidGVzdDFAbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMiRBbW9xNDFpM09TT01Pa0VsUjlaRkN1dU96eEtKTlh2ZHNuT1BHUVpZdjR5dTdpYjJnR1pLYSIsIl9fdiI6MH0sImlhdCI6MTY3ODIwMDcxNywiZXhwIjoxNjc4MjA0MzE3fQ.e12AS6KcJ757x5HTffZ-kKkzl4qfA3Mk12Rr_imrfOQ
+
+
+
+#################
+##User###########
+#################
+
+### add one article 
+POST {{baseURL}}/article 
+Content-Type: application/json
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MDc0OTZhNTQ1OGY1MjQ5N2ZjMTY3NyIsImVtYWlsIjoidGVzdDFAbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMiRBbW9xNDFpM09TT01Pa0VsUjlaRkN1dU96eEtKTlh2ZHNuT1BHUVpZdjR5dTdpYjJnR1pLYSIsIl9fdiI6MH0sImlhdCI6MTY3OTM5MDk1OCwiZXhwIjoxNjc5Mzk0NTU4fQ.vnp0cMYARqvbfSyIQ4N9arowHnw7UF4VK_lxhqgYF5U
+
+{
+    "title": "le meilleur article566",
+    "content" : "ceci est le meilleur article ",
+    "category": "sport"
+}
+
+### get articles 
+GET {{baseURL}}/article
+
+### update article 
+PUT {{baseURL}}/article/6410807048c81debffd1c992
+Content-Type: application/json
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MDc0OTZhNTQ1OGY1MjQ5N2ZjMTY3NyIsImVtYWlsIjoidGVzdDFAbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMiRBbW9xNDFpM09TT01Pa0VsUjlaRkN1dU96eEtKTlh2ZHNuT1BHUVpZdjR5dTdpYjJnR1pLYSIsIl9fdiI6MH0sImlhdCI6MTY3ODgwMzAzOCwiZXhwIjoxNjc4ODA2NjM4fQ.YE1sJG4dvk1988cPJavH3LFzph99hX83qFlDstR3rNg
+
+{
+    "title": "le meilleur article modifié ",
+    "content" : "ceci est le meilleur  modifié  ",
+    "category": "sport"
+}
+
+### delete article 
+DELETE {{baseURL}}/article/6410807048c81debffd1c992
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MDc0OTZhNTQ1OGY1MjQ5N2ZjMTY3NyIsImVtYWlsIjoidGVzdDFAbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMiRBbW9xNDFpM09TT01Pa0VsUjlaRkN1dU96eEtKTlh2ZHNuT1BHUVpZdjR5dTdpYjJnR1pLYSIsIl9fdiI6MH0sImlhdCI6MTY3ODgwMzAzOCwiZXhwIjoxNjc4ODA2NjM4fQ.YE1sJG4dvk1988cPJavH3LFzph99hX83qFlDstR3rNg
+
+
+### get by category 
+GET {{baseURL}}/article/tech
+
+### searchArticle 
+GET {{baseURL}}/searchArticle/search?query=meilleur
+
+
+#################
+##Comments#######
+#################
+
+### Add comment 
+POST {{baseURL}}/comment/6410808948c81debffd1c996
+Content-Type: application/json
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MDc0OTZhNTQ1OGY1MjQ5N2ZjMTY3NyIsImVtYWlsIjoidGVzdDFAbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMiRBbW9xNDFpM09TT01Pa0VsUjlaRkN1dU96eEtKTlh2ZHNuT1BHUVpZdjR5dTdpYjJnR1pLYSIsIl9fdiI6MH0sImlhdCI6MTY3ODgwMzAzOCwiZXhwIjoxNjc4ODA2NjM4fQ.YE1sJG4dvk1988cPJavH3LFzph99hX83qFlDstR3rNg
+
+{
+    "content": "meilleur commentaire du monde"
+}
